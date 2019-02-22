@@ -2,21 +2,29 @@ package com.raccoon.training.rest_practice.model;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Data
-@Entity
+@Entity(name = "Conference")
+@Table(name = "conference")
 public class Conference {
-    
-    private @Id @GeneratedValue Long id;
-    private String name;
-    private String role;
 
-    public Conference(String name, String role) {
-        this.name = name;
-        this.role = role;
+    @Id
+    @GeneratedValue
+    private  Long id;
+    private String topic;
+
+    @OneToMany(
+            cascade = CascadeType.ALL,
+            orphanRemoval = true,
+            mappedBy ="conference"
+    )
+    private List<Report> reports;
+
+    public Conference(String topic, List<Report> reports) {
+        this.topic = topic;
+        this.reports = reports;
     }
 
     public Conference() {

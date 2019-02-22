@@ -2,7 +2,7 @@ package com.raccoon.training.rest_practice.web;
 
 import com.raccoon.training.rest_practice.exception.EmployeeNotFoundException;
 import com.raccoon.training.rest_practice.model.Conference;
-import com.raccoon.training.rest_practice.repository.EmployeeRepository;
+import com.raccoon.training.rest_practice.repository.ConferenceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,7 +16,7 @@ import java.util.List;
 public class EmployeeController {
     
     @Autowired
-    private EmployeeRepository repository;
+    private ConferenceRepository repository;
     
     @GetMapping("/employees")
     public List<Conference> getEmployees(){
