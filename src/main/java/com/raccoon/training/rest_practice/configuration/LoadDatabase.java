@@ -1,6 +1,6 @@
 package com.raccoon.training.rest_practice.configuration;
 
-import com.raccoon.training.rest_practice.model.Employee;
+import com.raccoon.training.rest_practice.model.Conference;
 import com.raccoon.training.rest_practice.repository.EmployeeRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
@@ -17,8 +17,8 @@ public class LoadDatabase {
     @Bean
     CommandLineRunner initDatabase(EmployeeRepository repository) {
         return args -> {
-            log.info("Preloading " + repository.save(new Employee("Bilbo Baggins", "burglar")));
-            log.info("Preloading " + repository.save(new Employee("Frodo Baggins", "thief")));
+            log.info("Preloading " + repository.save(new Conference("Bilbo Baggins", "burglar")));
+            log.info("Preloading " + repository.save(new Conference("Frodo Baggins", "thief")));
         };
     }
 }

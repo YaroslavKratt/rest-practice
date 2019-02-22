@@ -8,17 +8,17 @@ import javax.persistence.Id;
 
 @Data
 @Entity
-public class Employee {
+public class Conference {
     
     private @Id @GeneratedValue Long id;
     private String name;
     private String role;
 
-    public Employee(String name, String role) {
+    public Conference(String name, String role) {
         this.name = name;
         this.role = role;
     }
 
-    public Employee() {
+    public Conference() {
     }
 }
