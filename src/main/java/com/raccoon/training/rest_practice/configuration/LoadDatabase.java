@@ -1,7 +1,7 @@
-package com.epam.producing.testProject.configuration;
+package com.raccoon.training.rest_practice.configuration;
 
-import com.epam.producing.testProject.model.Employee;
-import com.epam.producing.testProject.repository.EmployeeRepository;
+import com.raccoon.training.rest_practice.model.Employee;
+import com.raccoon.training.rest_practice.repository.EmployeeRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

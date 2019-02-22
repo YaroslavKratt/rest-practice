@@ -1,4 +1,4 @@
-package com.epam.producing.testProject.exception;
+package com.raccoon.training.rest_practice.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;

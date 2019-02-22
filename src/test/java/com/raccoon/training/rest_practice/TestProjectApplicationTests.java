@@ -1,4 +1,4 @@
-package com.epam.producing.testProject;
+package com.raccoon.training.rest_practice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

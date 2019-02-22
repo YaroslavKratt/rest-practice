@@ -1,4 +1,4 @@
-package com.epam.producing.testProject;
+package com.raccoon.training.rest_practice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

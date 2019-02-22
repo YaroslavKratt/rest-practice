@@ -1,4 +1,4 @@
-package com.epam.producing.testProject.exception;
+package com.raccoon.training.rest_practice.exception;
 
 public class EmployeeNotFoundException extends RuntimeException {
 

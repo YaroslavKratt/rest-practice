@@ -1,4 +1,4 @@
-package com.epam.producing.testProject.model;
+package com.raccoon.training.rest_practice.model;
 
 import lombok.Data;
 
