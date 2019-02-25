@@ -1,6 +1,6 @@
 package com.raccoon.training.rest_practice.web;
 
-import com.raccoon.training.rest_practice.exception.EmployeeNotFoundException;
+import com.raccoon.training.rest_practice.exception.ConferenceNotFoundException;
 import com.raccoon.training.rest_practice.model.Conference;
 import com.raccoon.training.rest_practice.repository.ConferenceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,25 +13,25 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class EmployeeController {
+public class ConferenceController {
     
     @Autowired
     private ConferenceRepository repository;
     
-    @GetMapping("/employees")
-    public List<Conference> getEmployees(){
-        return repository.findAll();
+    @GetMapping("/conferences")
+    public Iterable<Conference> getConferences(){
+        return  repository.findAll();
     }
 
-    @PostMapping("/employees")
-    Conference newEmployee(@RequestBody Conference newEmployee) {
-        return repository.save(newEmployee);
+    @PostMapping("/conferences")
+    Conference newConference(@RequestBody Conference newConference) {
+        return repository.save(newConference);
     }
 
-    @GetMapping("/employees/{id}")
+    @GetMapping("/conferences/{id}")
     Conference one(@PathVariable Long id) {
 
         return repository.findById(id)
-                .orElseThrow(() -> new EmployeeNotFoundException(id));
+                .orElseThrow(() -> new ConferenceNotFoundException(id));
     }
 }
